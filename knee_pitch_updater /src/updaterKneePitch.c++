@@ -9,11 +9,9 @@ float effortKneePitch;
 float min_h_p = -0.5149; // min knee pitch pos
 float max_h_p = 0.5149; // max knee pitch pos
 
-float min_h_r = -0.5149; // min knee pitch vel
-float max_h_r = 0.5149; // max knee pitch vel
+float max_h_r = 5.86; // max knee pitch vel
 
-float min_k_p = -0.5149; // min knee pitch effort
-float max_k_p = 0.5149; // max knee pitch effort
+float max_k_p = 130; // max knee pitch effort
 
 float hip_p_thr; // threshold knee pitch pos warning
 float hip_r_thr; // threshold knee pitch vel warning
@@ -27,17 +25,15 @@ void kneePitchCallBack(const sensor_msgs::JointState::ConstPtr& msg){
 
 void posHip2_diagnostic(diagnostic_updater::DiagnosticStatusWrapper &stat){
 	if(posKneePitch <= (max_h_p*hip_p_thr) && posKneePitch>(min_h_p*hip_p_thr)
-	&& velKneePitch <= (max_h_r*hip_r_thr) && posKneePitch>(min_h_r*hip_r_thr) 
-	&& effortKneePitch <= (max_k_p*knee_p_thr) && effortKneePitch>(min_k_p*knee_p_thr)) {
+	&& velKneePitch <= (max_h_r*hip_r_thr) && effortKneePitch <= (max_k_p*knee_p_thr)) {
 		stat.summary(diagnostic_msgs::DiagnosticStatus::OK,"OK");
 	} else if((posKneePitch<max_h_p && posKneePitch>min_h_p) 
-	|| (velKneePitch<max_h_r && velKneePitch>min_h_r)
-	|| (effortKneePitch<max_k_p && effortKneePitch>min_k_p)){
+	|| (velKneePitch<max_h_r)
+	|| (effortKneePitch<max_k_p)){
 		stat.summary(diagnostic_msgs::DiagnosticStatus::WARN,"ATTENZIONE");
 	} else {
-		stat.summary(diagnostic_msgs::DiagnosticStatus::ERROR,"SI E' ROTTO");
+		stat.summary(diagnostic_msgs::DiagnosticStatus::ERROR,"GUASTO");
 	}
-
 	stat.add("Diagnostic name", "Knee Pitch");
 	stat.add("Knee pitch position", posKneePitch);
 	stat.add("Knee pitch velocity", velKneePitch); 

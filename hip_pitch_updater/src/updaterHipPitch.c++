@@ -9,11 +9,9 @@ float effortHipPitch;
 float min_h_p = -1.0385; // min hip pitch pos
 float max_h_p = 1.0385; // max hip pitch pos
 
-float min_h_r = -0.5149; // min hip pitch vel
-float max_h_r = 0.5149; // max hip pitch vel
+float max_h_r = 5.86; // max hip pitch vel
 
-float min_k_p = -0.5149; // min hip pitch effort
-float max_k_p = 0.5149; // max hip pitch effort
+float max_k_p = 130; // max hip pitch effort
 
 float hip_p_thr; // threshold hip pitch pos warning
 float hip_r_thr; // threshold hip pitch vel warning
@@ -27,12 +25,11 @@ void hipPitchCallBack(const sensor_msgs::JointState::ConstPtr& msg){
 
 void posHip0_diagnostic(diagnostic_updater::DiagnosticStatusWrapper &stat){
 	if(posHipPitch <= (max_h_p*hip_p_thr) && posHipPitch>(min_h_p*hip_p_thr)
-	&& velHipPitch <= (max_h_r*hip_r_thr) && posHipPitch>(min_h_r*hip_r_thr) 
-	&& effortHipPitch <= (max_k_p*knee_p_thr) && effortHipPitch>(min_k_p*knee_p_thr)) {
+	&& velHipPitch <= (max_h_r*hip_r_thr) && effortHipPitch <= (max_k_p*knee_p_thr)) {
 		stat.summary(diagnostic_msgs::DiagnosticStatus::OK,"OK");
 	} else if((posHipPitch<max_h_p && posHipPitch>min_h_p) 
-	|| (velHipPitch<max_h_r && velHipPitch>min_h_r)
-	|| (effortHipPitch<max_k_p && effortHipPitch>min_k_p)){
+	|| (velHipPitch<max_h_r)
+	|| (effortHipPitch<max_k_p)){
 		stat.summary(diagnostic_msgs::DiagnosticStatus::WARN,"ATTENZIONE");
 	} else {
 		stat.summary(diagnostic_msgs::DiagnosticStatus::ERROR,"SI E' ROTTO");

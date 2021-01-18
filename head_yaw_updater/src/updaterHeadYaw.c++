@@ -9,11 +9,9 @@ double effHeadYaw0;
 double max_h_y = 2.085;
 double min_h_y = -2.085;
 
-double max_h_yv = 1;
-double min_h_yv = -1;
+double max_h_yv = 5.9;
 
-double max_h_ye = 1;
-double min_h_ye = -1;
+double max_h_ye = 42.9;
 
 double head_y_thr; // threshold head yaw warning
 double head_e_thr; // threshold head yaw effort warning
@@ -26,9 +24,9 @@ void headCallBack(const sensor_msgs::JointState::ConstPtr& msg){
 }
 
 void posHead0_diagnostic(diagnostic_updater::DiagnosticStatusWrapper &stat){
-    if(posHeadYaw0 <= (max_h_y*head_y_thr) && posHeadYaw0>(min_h_y*head_y_thr) && velHeadYaw0 <= (max_h_yv*head_v_thr) && velHeadYaw0>(min_h_yv*head_v_thr) && effHeadYaw0 <= (max_h_ye*head_e_thr) && effHeadYaw0>(min_h_ye*head_e_thr)) {
+    if(posHeadYaw0 <= (max_h_y*head_y_thr) && posHeadYaw0>(min_h_y*head_y_thr) && velHeadYaw0 <= (max_h_yv*head_v_thr) && effHeadYaw0 <= (max_h_ye*head_e_thr)) {
         stat.summary(diagnostic_msgs::DiagnosticStatus::OK,"OK");
-    } else if((posHeadYaw0<max_h_y && posHeadYaw0>min_h_y) || (velHeadYaw0<max_h_yv && velHeadYaw0>min_h_yv) || (effHeadYaw0<max_h_ye && effHeadYaw0>min_h_ye)){
+    } else if((posHeadYaw0<max_h_y && posHeadYaw0>min_h_y) || velHeadYaw0<max_h_yv || effHeadYaw0<max_h_ye){
         stat.summary(diagnostic_msgs::DiagnosticStatus::WARN,"ATTENZIONE");
     } else {
         stat.summary(diagnostic_msgs::DiagnosticStatus::ERROR,"GUASTO");

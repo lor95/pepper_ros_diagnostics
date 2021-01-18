@@ -9,11 +9,9 @@ float effortHipRoll;
 float min_h_p = -0.5149; // min hip roll pos
 float max_h_p = 0.5149; // max hip roll pos
 
-float min_h_r = -0.5149; // min hip roll vel
-float max_h_r = 0.5149; // max hip roll vel
+float max_h_r = 4.54; // max hip roll vel
 
-float min_k_p = -0.5149; // min hip roll effort
-float max_k_p = 0.5149; // max hip roll effort
+float max_k_p = 69.5; // max hip roll effort
 
 float hip_p_thr; // threshold hip roll pos warning
 float hip_r_thr; // threshold hip roll vel warning
@@ -27,12 +25,11 @@ void hipRollCallBack(const sensor_msgs::JointState::ConstPtr& msg){
 
 void posHip1_diagnostic(diagnostic_updater::DiagnosticStatusWrapper &stat){
 	if(posHipRoll <= (max_h_p*hip_p_thr) && posHipRoll>(min_h_p*hip_p_thr)
-	&& velHipRoll <= (max_h_r*hip_r_thr) && posHipRoll>(min_h_r*hip_r_thr) 
-	&& effortHipRoll <= (max_k_p*knee_p_thr) && effortHipRoll>(min_k_p*knee_p_thr)) {
+	&& velHipRoll <= (max_h_r*hip_r_thr) && effortHipRoll <= (max_k_p*knee_p_thr)) {
 		stat.summary(diagnostic_msgs::DiagnosticStatus::OK,"OK");
 	} else if((posHipRoll<max_h_p && posHipRoll>min_h_p) 
-	|| (velHipRoll<max_h_r && velHipRoll>min_h_r)
-	|| (effortHipRoll<max_k_p && effortHipRoll>min_k_p)){
+	|| (velHipRoll<max_h_r)
+	|| (effortHipRoll<max_k_p)){
 		stat.summary(diagnostic_msgs::DiagnosticStatus::WARN,"ATTENZIONE");
 	} else {
 		stat.summary(diagnostic_msgs::DiagnosticStatus::ERROR,"SI E' ROTTO");
