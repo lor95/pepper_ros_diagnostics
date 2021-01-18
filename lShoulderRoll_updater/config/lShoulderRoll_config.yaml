@@ -1,0 +1,5 @@
+pepper: 
+  left_arm_params: 
+    lshoulder_roll_warnthr: 0.9
+    lshoulder_rollV_warnthr: 0.9
+    lshoulder_rollE_warnthr: 0.9

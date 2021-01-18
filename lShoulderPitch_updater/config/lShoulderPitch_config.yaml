@@ -1,0 +1,5 @@
+pepper: 
+  left_arm_params: 
+    lshoulder_pitch_warnthr: 0.9
+    lshoulder_pitchV_warnthr: 0.9
+    lshoulder_pitchE_warnthr: 0.9

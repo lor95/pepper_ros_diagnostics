@@ -1,0 +1,5 @@
+pepper: 
+  left_arm_params: 
+    lelbow_yawE_warnthr: 0.9
+    lelbow_yaw_warnthr: 0.9
+    lelbow_yawV_warnthr: 0.9

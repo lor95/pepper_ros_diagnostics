@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+<rosparam file="$(find lShoulderRoll_updater)/config/lShoulderRoll_config.yaml" command="load"/>
+
+<node name="lShoulderRoll_updater_node" pkg="lShoulderRoll_updater" type="lShoulderRoll_updater_node" output="screen"/>
+</launch>

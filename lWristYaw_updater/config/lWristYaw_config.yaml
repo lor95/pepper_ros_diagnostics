@@ -1,0 +1,5 @@
+pepper: 
+  left_arm_params: 
+    lwrist_yaw_warnthr: 0.9
+    lwrist_yawV_warnthr: 0.9
+    lwrist_yawE_warnthr: 0.9
