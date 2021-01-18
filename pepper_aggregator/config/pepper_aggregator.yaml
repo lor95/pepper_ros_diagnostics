@@ -5,3 +5,7 @@ analyzers:
     type: GenericAnalyzer
     path: Head
     startswith: 'head'
+  hip:
+    type: GenericAnalyzer
+    path: Hip
+    startswith: ['hip','knee']
