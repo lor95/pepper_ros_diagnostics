@@ -1,0 +1,32 @@
+<package format="2">
+<name>hip_roll_updater</name>
+<version>0.0.0</version>
+<description>The updater package</description>
+<maintainer email="natalia.lyubova@gmail.com">Natalia Lyubova</maintainer>
+<license>BSD</license>
+<buildtool_depend>catkin</buildtool_depend>
+<build_depend>roscpp</build_depend>
+<build_depend>rospy</build_depend>
+<build_depend>std_msgs</build_depend>
+<build_depend>controller_manager</build_depend>
+<build_depend>hardware_interface</build_depend>
+<build_depend>geometry_msgs</build_depend>
+<build_depend>tf</build_depend>
+<build_depend>sensor_msgs</build_depend>
+<build_depend>naoqi_libqi</build_depend>
+<build_depend>naoqi_libqicore</build_depend>
+<build_depend>diagnostic_msgs</build_depend>
+<build_depend>diagnostic_updater</build_depend>
+<exec_depend>roscpp</exec_depend>
+<exec_depend>rospy</exec_depend>
+<exec_depend>std_msgs</exec_depend>
+<exec_depend>geometry_msgs</exec_depend>
+<exec_depend>controller_manager</exec_depend>
+<exec_depend>hardware_interface</exec_depend>
+<exec_depend>tf</exec_depend>
+<exec_depend>sensor_msgs</exec_depend>
+<exec_depend>naoqi_libqi</exec_depend>
+<exec_depend>naoqi_libqicore</exec_depend>
+<exec_depend>diagnostic_updater</exec_depend>
+<exec_depend>diagnostic_msgs</exec_depend>
+</package>

@@ -1,0 +1,4 @@
+<launch>
+<rosparam file="$(find head_yaw_updater)/config/head_config.yaml" command="load"/>
+<node name="head_yaw_updater_node" pkg="head_yaw_updater" type="head_yaw_updater_node" output="screen"/>
+</launch>

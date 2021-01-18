@@ -1,0 +1,5 @@
+pepper: 
+  head_params: 
+    head_yaw_warnthr: 0.9
+    head_yv_warnthr: 0.9
+    head_ye_warnthr: 0.9

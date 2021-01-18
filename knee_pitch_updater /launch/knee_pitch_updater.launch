@@ -1,0 +1,4 @@
+<launch>
+<rosparam file="$(find knee_pitch_updater)/config/hip_config.yaml" command="load"/>
+<node name="knee_pitch_updater_node" pkg="knee_pitch_updater" type="knee_pitch_updater_node" output="screen"/>
+</launch>

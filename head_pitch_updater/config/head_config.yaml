@@ -1,0 +1,5 @@
+pepper: 
+  head_params: 
+    head_pitch_warnthr: 0.9
+    head_pv_warnthr: 0.9
+    head_pe_warnthr: 0.9

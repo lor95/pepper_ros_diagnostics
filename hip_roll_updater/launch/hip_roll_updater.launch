@@ -1,0 +1,4 @@
+<launch>
+<rosparam file="$(find hip_roll_updater)/config/hip_config.yaml" command="load"/>
+<node name="hip_roll_updater_node" pkg="hip_roll_updater" type="hip_roll_updater_node" output="screen"/>
+</launch>

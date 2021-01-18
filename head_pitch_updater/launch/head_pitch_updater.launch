@@ -1,0 +1,4 @@
+<launch>
+<rosparam file="$(find head_pitch_updater)/config/head_config.yaml" command="load"/>
+<node name="head_pitch_updater_node" pkg="head_pitch_updater" type="head_pitch_updater_node" output="screen"/>
+</launch>

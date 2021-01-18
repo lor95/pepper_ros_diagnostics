@@ -1,0 +1,5 @@
+pepper: 
+  hip_params: 
+    hip_pitch_warnthr: 0.9
+    hip_roll_warnthr: 0.9
+    knee_pitch_warnthr: 0.9
