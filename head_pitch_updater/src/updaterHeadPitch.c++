@@ -55,7 +55,7 @@ void posHead0_diagnostic(diagnostic_updater::DiagnosticStatusWrapper &stat){
         max_h_p = 0.236;
     }
 
-    if(posHeadPitch0 <= (max_h_p*head_p_thr) && posHeadPitch0>(min_h_p*head_p_thr) && velHeadPitch0 <= (max_h_pv*head_v_thr) && velHeadPitch0>(min_h_pv*head_v_thr) && effHeadPitch0 <= (max_h_ye*head_e_thr) && effHeadPitch0>(min_h_y*head_e_thr)) {
+    if(posHeadPitch0 <= (max_h_p*head_p_thr) && posHeadPitch0>(min_h_p*head_p_thr) && velHeadPitch0 <= (max_h_pv*head_v_thr) && velHeadPitch0>(min_h_pv*head_v_thr) && effHeadPitch0 <= (max_h_pe*head_e_thr) && effHeadPitch0>(min_h_y*head_e_thr)) {
         stat.summary(diagnostic_msgs::DiagnosticStatus::OK,"OK");
     } else if((posHeadPitch0<max_h_y && posHeadPitch0>min_h_y) || (velHeadPitch0<max_h_pv && velHeadPitch0>min_h_pv) || (effHeadPitch0<max_h_pe && effHeadPitch0>min_h_pe)){
         stat.summary(diagnostic_msgs::DiagnosticStatus::WARN,"ATTENZIONE");
