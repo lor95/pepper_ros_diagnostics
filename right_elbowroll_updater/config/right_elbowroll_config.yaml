@@ -1,0 +1,5 @@
+pepper: 
+  right_arm_params: 
+    relbow_roll_warnthr: 0.9
+    relbow_rollV_warnthr: 0.9
+    relbow_rollE_warnthr: 0.9
