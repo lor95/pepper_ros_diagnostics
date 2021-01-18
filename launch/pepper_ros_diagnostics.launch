@@ -1,0 +1,8 @@
+<launch>
+<include file="$(find head_yaw_updater)/launch/head_yaw_updater.launch"/>
+<include file="$(find head_pitch_updater)/launch/head_pitch_updater.launch"/>
+<include file="$(find hip_pitch_updater)/launch/hip_pitch_updater.launch"/>
+<include file="$(find hip_roll_updater)/launch/hip_roll_updater.launch"/>
+<include file="$(find knee_pitch_updater)/launch/knee_pitch_updater.launch"/>
+<node name="rqt_runtime_monitor" pkg="rqt_runtime_monitor" type="rqt_runtime_monitor"/>
+</launch>
