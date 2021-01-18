@@ -1,5 +1,5 @@
 <package>
-<name>pepper_ros_diagnostics</name>
+<name>pepper_diagnostics</name>
 <version>0.0.4</version>
 <description>diagnostic plugin pepper robot</description>
 <maintainer email="natalia.lyubova@gmail.com">Natalia Lyubova</maintainer>
