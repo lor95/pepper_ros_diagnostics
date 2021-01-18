@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+<rosparam file="$(find left_elbowroll_updater)/config/left_elbowroll_config.yaml" command="load"/>
+
+<node name="left_elbowroll_updater_node" pkg="left_elbowroll_updater" type="left_elbowroll_updater_node" output="screen"/>
+</launch>

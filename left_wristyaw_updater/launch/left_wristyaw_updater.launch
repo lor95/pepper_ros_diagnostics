@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+<rosparam file="$(find left_wristyaw_updater)/config/left_wristyaw_config.yaml" command="load"/>
+
+<node name="left_wristyaw_updater_node" pkg="left_wristyaw_updater" type="left_wristyaw_updater_node" output="screen"/>
+</launch>

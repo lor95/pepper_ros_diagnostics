@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+<rosparam file="$(find left_elbowyaw_updater)/config/left_elbowyaw_config.yaml" command="load"/>
+
+<node name="left_elbowyaw_updater_node" pkg="left_elbowyaw_updater" type="left_elbowyaw_updater_node" output="screen"/>
+</launch>

@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-
-<rosparam file="$(find lWristYaw_updater)/config/lWristYaw_config.yaml" command="load"/>
-
-<node name="lWristYaw_updater_node" pkg="lWristYaw_updater" type="lWristYaw_updater_node" output="screen"/>
-</launch>

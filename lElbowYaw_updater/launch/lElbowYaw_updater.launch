@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-
-<rosparam file="$(find lElbowYaw_updater)/config/lElbowYaw_config.yaml" command="load"/>
-
-<node name="lElbowYaw_updater_node" pkg="lElbowYaw_updater" type="lElbowYaw_updater_node" output="screen"/>
-</launch>

@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-
-<rosparam file="$(find lShoulderPitch_updater)/config/lShoulderPitch_config.yaml" command="load"/>
-
-<node name="lShoulderPitch_updater_node" pkg="lShoulderPitch_updater" type="lShoulderPitch_updater_node" output="screen"/>
-</launch>

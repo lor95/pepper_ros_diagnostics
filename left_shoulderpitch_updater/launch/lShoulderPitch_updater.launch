@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+<rosparam file="$(find left_shoulderpitch_updater)/config/left_shoulderpitch_config.yaml" command="load"/>
+
+<node name="left_shoulderpitch_updater_node" pkg="left_shoulderpitch_updater" type="left_shoulderpitch_updater_node" output="screen"/>
+</launch>

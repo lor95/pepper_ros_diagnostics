@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-
-<rosparam file="$(find lElbowRoll_updater)/config/lElbowRoll_config.yaml" command="load"/>
-
-<node name="lElbowRoll_updater_node" pkg="lElbowRoll_updater" type="lElbowRoll_updater_node" output="screen"/>
-</launch>
