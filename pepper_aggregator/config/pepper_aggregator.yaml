@@ -1,7 +1,7 @@
 pub_rate: 1.0 # Optional
-base_path: '' # Optional, prepended to all diagnostic output
+base_path: 'Pepper' # Optional, prepended to all diagnostic output
 analyzers:
   head:
     type: GenericAnalyzer
-    path: Joints
+    path: Head
     startswith: 'head'
