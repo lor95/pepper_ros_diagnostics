@@ -14,5 +14,6 @@
 <include file="$(find right_shoulderpitch_updater)/launch/right_shoulderpitch_updater.launch"/>
 <include file="$(find right_shoulderroll_updater)/launch/right_shoulderroll_updater.launch"/>
 <include file="$(find right_wristyaw_updater)/launch/right_wristyaw_updater.launch"/>
-<node name="rqt_runtime_monitor" pkg="rqt_runtime_monitor" type="rqt_runtime_monitor"/>
+<include file="$(find pepper_aggregator)/launch/pepper_aggregator.launch"/>
+<node name="rqt_robot_monitor" pkg="rqt_robot_monitor" type="rqt_robot_monitor"/>
 </launch>
