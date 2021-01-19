@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+<rosparam file="$(find right_shoulderpitch_updater)/config/right_shoulderpitch_config.yaml" command="load"/>
+
+<node name="right_shoulderpitch_updater_node" pkg="right_shoulderpitch_updater" type="right_shoulderpitch_updater_node" output="screen"/>
+</launch>

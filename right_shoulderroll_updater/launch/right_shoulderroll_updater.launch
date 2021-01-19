@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+<rosparam file="$(find right_shoulderroll_updater)/config/right_shoulderroll_config.yaml" command="load"/>
+
+<node name="right_shoulderroll_updater_node" pkg="right_shoulderroll_updater" type="right_shoulderroll_updater_node" output="screen"/>
+</launch>

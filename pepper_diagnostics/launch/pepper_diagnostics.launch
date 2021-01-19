@@ -4,5 +4,15 @@
 <include file="$(find hip_pitch_updater)/launch/hip_pitch_updater.launch"/>
 <include file="$(find hip_roll_updater)/launch/hip_roll_updater.launch"/>
 <include file="$(find knee_pitch_updater)/launch/knee_pitch_updater.launch"/>
+<include file="$(find left_elbowroll_updater)/launch/left_elbowroll_updater.launch"/>
+<include file="$(find left_elbowyaw_updater)/launch/left_elbowyaw_updater.launch"/>
+<include file="$(find left_shoulderpitch_updater)/launch/left_shoulderpitch_updater.launch"/>
+<include file="$(find left_shoulderroll_updater)/launch/left_shoulderroll_updater.launch"/>
+<include file="$(find left_wristyaw_updater)/launch/left_wristyaw_updater.launch"/>
+<include file="$(find right_elbowroll_updater)/launch/right_elbowroll_updater.launch"/>
+<include file="$(find right_elbowyaw_updater)/launch/right_elbowyaw_updater.launch"/>
+<include file="$(find right_shoulderpitch_updater)/launch/right_shoulderpitch_updater.launch"/>
+<include file="$(find right_shoulderroll_updater)/launch/right_shoulderroll_updater.launch"/>
+<include file="$(find right_wristyaw_updater)/launch/right_wristyaw_updater.launch"/>
 <node name="rqt_runtime_monitor" pkg="rqt_runtime_monitor" type="rqt_runtime_monitor"/>
 </launch>

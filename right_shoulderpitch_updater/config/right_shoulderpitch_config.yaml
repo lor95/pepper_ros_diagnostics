@@ -1,0 +1,5 @@
+pepper: 
+  right_arm_params: 
+    rshoulder_pitch_warnthr: 0.9
+    rshoulder_pitchV_warnthr: 0.9
+    rshoulder_pitchE_warnthr: 0.9

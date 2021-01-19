@@ -1,0 +1,5 @@
+pepper: 
+  right_arm_params: 
+    rshoulder_roll_warnthr: 0.9
+    rshoulder_rollV_warnthr: 0.9
+    rshoulder_rollE_warnthr: 0.9

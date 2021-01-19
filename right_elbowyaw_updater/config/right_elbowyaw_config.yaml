@@ -1,0 +1,5 @@
+pepper: 
+  right_arm_params: 
+    relbow_yawE_warnthr: 0.9
+    relbow_yaw_warnthr: 0.9
+    relbow_yawV_warnthr: 0.9
