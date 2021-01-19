@@ -56,7 +56,7 @@ int main(int argc, char** argv){
 	diagnostic_updater::Updater updater;
 	ros::Subscriber sub=n.subscribe("/joint_states",1000,rightArmCallBack);
 	updater.setHardwareID("Robot-RightArm");
-	updater.add("Position Right Shoulder pitch", posShoulderpitch_diagnostic);
+	updater.add("Right Shoulder pitch", posShoulderpitch_diagnostic);
 	ros::Rate loop_rate(100);
 	while(n.ok())
 		{
