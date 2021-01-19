@@ -9,3 +9,11 @@ analyzers:
     type: GenericAnalyzer
     path: Hip
     startswith: ['hip','knee']
+  right_arm:
+    type: GenericAnalyzer
+    path: Right_Arm
+    startswith: ['right'] 
+  left_arm:
+    type: GenericAnalyzer
+    path: Left_Arm
+    startswith: ['left'] 
