@@ -40,9 +40,9 @@ void posShoulderroll_diagnostic(diagnostic_updater::DiagnosticStatusWrapper &sta
 	}
 
 	stat.add("Diagnostic name", "LeftShoulderRoll");
-	stat.add("Shoulder pitch position", posShoulderRoll0);
-	stat.add("Shoulder pitch velocity", velShoulderRoll0);
-	stat.add("Shoulder pitch effort", effShoulderRoll0);
+	stat.add("Shoulder roll position", posShoulderRoll0);
+	stat.add("Shoulder roll velocity", velShoulderRoll0);
+	stat.add("Shoulder roll effort", effShoulderRoll0);
 }
 
 
